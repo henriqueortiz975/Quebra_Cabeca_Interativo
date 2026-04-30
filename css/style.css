@@ -137,8 +137,8 @@ body {
   justify-content: center;
   align-items: center;
   transition: 0.4s;
-  position: relative;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 /* Cria um brilho visual na peça */
