@@ -110,14 +110,14 @@ botaoAtivar2.addEventListener("click", function(){
 })
 
 peca2.addEventListener("click", function () {
-    let toggle = peca2.classList.toggle("ativa");
+    let ativo =false = peca2.classList.toggle("ativa");
 
-    if (toggle === false) {
-        toggle = "desativa";
+    if (ativo === false) {
+        ativo = "desativa";
         peca2.style.background = "#00c046";
         iconePeca2.innerText = "🟢";
     } else {
-        toggle = "ativa";
+        ativo = "ativa";
         peca2.style.background = "#c52222";
         iconePeca2.innerText = "🔴";
     }
