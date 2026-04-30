@@ -54,8 +54,8 @@ botaoAtivar.addEventListener("click", function(){
 peca.addEventListener("click", function(){
     //Verificando se a peça já foi clicada anteriomente
     if(pecaAtivada === true){
-        //Guiando a peça para a primeira aula de JavaScript
-        peca.getAttribute = window.location.href = "https://professorederderosso.notion.site/JavaScript-Interatividade-3508374555cd80aa8d3bfd661401345a";
+        //Abrindo uma pagina que fala sobre JavaScript e DOM
+        window.open(URL = "pagina.html");
     }
 })
 
