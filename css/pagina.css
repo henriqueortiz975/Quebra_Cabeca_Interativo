@@ -68,3 +68,14 @@ th {
   background: #c5c222;
   color: black;
 }
+
+/* Adaptação para telas menores */
+@media (max-width: 800px) {
+  .area-projeto {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}

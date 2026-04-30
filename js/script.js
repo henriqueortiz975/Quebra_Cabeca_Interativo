@@ -35,7 +35,7 @@ botaoAtivar.addEventListener("click", function(){
         peca.classList.add("ativa");
 
         //Mudança de texto
-        statusTexto.innerText = "Ativado";
+        statusTexto.innerText = "Desbloqueado";
 
         //Alterar cor do texto
         statusTexto.style.color = "#22c55e";
@@ -50,7 +50,7 @@ botaoAtivar.addEventListener("click", function(){
         textoPeca.innerText = "Parabéns! Você ativou a primeira peça";
 
         //Alterar texto do botão
-        botaoAtivar.innerText = "Peca Ativada";
+        botaoAtivar.innerText = "Peça Ativada";
         
         //Desativar o botão após clique
         botaoAtivar.disabled = true;
@@ -82,7 +82,7 @@ botaoAtivar2.addEventListener("click", function(){
         peca2.style.background = "#c52222"
 
         //Mudança de texto
-        statusTexto2.innerText = "Ativado";
+        statusTexto2.innerText = "Desbloqueado";
 
         //Alterar cor do texto
         statusTexto2.style.color = "#22c55e";
@@ -99,7 +99,7 @@ botaoAtivar2.addEventListener("click", function(){
         textoPeca2.innerText = "Parabéns! Você ativou a segunda peça";
 
         //Alterar texto do botão
-        botaoAtivar2.innerText = "Peca 2 Ativada";
+        botaoAtivar2.innerText = "Peça 2 Ativada";
         
         //Desativar o botão após clique
         botaoAtivar2.disabled = true;
