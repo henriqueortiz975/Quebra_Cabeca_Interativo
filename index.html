@@ -19,7 +19,7 @@
   <main class="container">
 
     <!-- Cabeçalho da página -->
-    <section class="hero">
+    <header class="hero">
       <p class="tag">Programação Website I</p>
 
       <h1>🧩Quebra-Cabeça Interativo</h1>
@@ -27,75 +27,86 @@
       <p class="descricao">
         Nesta aula vamos criar a primeira peça interativa usando HTML, CSS e JavaScript.
       </p>
-    </section>
+    </header>
+    
+  <!-- Organização dos sections um do lado do outro--> 
+<div class="Organizar">
+  
+  <!-- Área onde ficará o projeto -->
+  <section class="area-projeto">
+    
+    <!-- Card com informações -->    
+    <div id = "peca1" class="card-info">
+      <h2>Peça 01</h2>
 
-    <!-- Área onde ficará o projeto -->
-    <section class="area-projeto">
-
-      <!-- Card com informações e botão -->
-      <div class="card-info">
-        <h2>Peça 01</h2>
-
-        <p>
-          Clique no botão para ativar a primeira peça do projeto.
-        </p>
-
-        <!-- Área que mostra o status da peça -->
-        <div class="status-box">
-          <span>Status:</span>
-          <strong id="statusTexto">Bloqueada</strong>
-        </div>
-
-        <!-- Botão que será usado pelo JavaScript -->
-        <button id="btnAtivar" class="btn-principal">
-          Ativar Peça
-        </button>
+      <p id = "textoPeca1">Clique no botão para ativar a primeira peça do projeto.</p>
+      
+      <!-- Área que mostra o status da peça -->
+      <div class="status-box">
+        <span>Status:</span>
+        <strong id="statusTexto1">Bloqueada</strong>
       </div>
 
-      <!-- Peça visual do quebra-cabeça -->
-      <div id="peca" class="peca bloqueada">
-        <div class="peca-conteudo">
-          <span id="iconePeca" class="icone">🔒</span>
-          <h3 id="tituloPeca">Peça Bloqueada</h3>
-          <p id="textoPeca">Aguardando interação...</p>
-        </div>
+    </div>
+
+  </section>
+  
+  <!-- Área onde ficará o projeto -->
+  <section class="area-projeto">
+
+    <!-- Card com informações -->     
+    <div class="card-info">
+      <h2>Peça 02</h2>
+
+      <p>Clique no botão para ativar a segunda peça do projeto.</p>
+
+      <!-- Área que mostra o status da peça -->
+      <div class="status-box">
+        <span>Status:</span>
+        <strong id="statusTexto2">Bloqueada</strong>
       </div>
 
-    </section>
+    </div>
 
-    <!-- Segunda peça do projeto -->
-    <section class="area-projeto">
+  </section>
 
-      <!-- Card com informações e botão -->
-      <div class="card-info">
-        <h2>Peça 02</h2>
+  <!-- Área onde ficará o projeto -->
+  <section class="area-projeto">
 
-        <p>
-          Clique no botão para ativar a segunda peça do projeto.
-        </p>
+    <!-- Card com informações -->    
+    <div class="card-info">
+      <h2>Peça 03</h2>
 
-        <!-- Área que mostra o status da peça -->
-        <div class="status-box">
-          <span>Status:</span>
-          <strong id="statusTexto2">Bloqueada</strong>
-        </div>
+      <p>Clique no botão para ativar a terceira peça do projeto.</p>
 
-        <!-- Botão que será usado pelo JavaScript -->
-        <button id="btnAtivar2" class="btn-principal">
-          Ativar Peça
-        </button>
+      <!-- Área que mostra o status da peça -->
+      <div class="status-box">
+        <span>Status:</span>
+        <strong id="statusTexto3">Bloqueada</strong>
       </div>
 
-      <!-- Peça visual do quebra-cabeça -->
-      <div id="peca2" class="peca bloqueada">
-        <div class="peca-conteudo">
-          <span id="iconePeca2" class="icone">🔒</span>
-          <h3 id="tituloPeca2">Peça 2 Bloqueada</h3>
-          <p id="textoPeca2">Aguardando interação...</p>
-        </div>
-      </div>
+    </div>
 
-    </section>
+  </section>
+
+  <!-- Área onde ficará o projeto -->
+  <section class="area-projeto">
+
+    <!-- Card com informações --> 
+    <div class="card-info">
+      <h2>Peça 04</h2>
+
+      <p>Clique no botão para ativar a quarta peça do projeto.</p>
+    
+      <!-- Área que mostra o status da peça -->
+      <div class="status-box">
+        <span>Status:</span>
+        <strong id="statusTexto4">Bloqueada</strong>
+      </div>
+    </div>
+  </section>
+
+</div>
 
   </main>
 
