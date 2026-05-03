@@ -143,12 +143,6 @@ body {
 }
 
 /* ---Ativado pelo Script--- */
-/* Estado inicial da peça */
-.bloqueada {
-  background: linear-gradient(135deg, #334155, #0f172a);
-  border: 2px solid rgba(148, 163, 184, 0.2);
-  filter: grayscale(40%);
-}
 
 /* Estado ativado da peça */
 .ativa {
