@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Inteligente</title>
+  <link rel="stylesheet" href="css/pagina2.css">
+</head>
+<body>
+
+<header>
+  <h1>Frontend Inteligente (Evolução com JavaScript)</h1>
+  <p>Aprender a manipular classes e elementos no DOM com JavaScript, usando eventos para controlar estados dinâmicos</p>
+</header>
+
+<main>
+  <section>
+    <h2>Manipulação de Classes</h2>
+    <p>Permite alterar classes CSS via JavaScript.</p>
+
+    <pre>
+// Adiciona a classe "ativa" ao elemento
+elemento.classList.add("ativa");
+
+// Remove a classe "ativa"
+elemento.classList.remove("ativa");
+
+// Alterna a classe:
+// se existir → remove
+// se não existir → adiciona
+elemento.classList.toggle("ativa");
+    </pre>
+
+  </section>
+
+    <section>
+    <h2>Estado Dinâmico</h2>
+    <p>O estado passa a ser controlado pela classe</p>
+
+    <pre>
+// Antes usamos:
+let ativo = false;
+
+// Agora usamos o próprio DOM:
+// Verifica se o elemento possui a classe
+elemento.classList.contains("ativa");
+    </pre>
+
+  </section>
+
+  <section>
+    <h2>Múltiplos Elementos</h2>
+    <h3>📌 querySelectorAll</h3>
+
+    <pre>
+// Seleciona todos os elementos com classe "peca"
+const pecas = document.querySelectorAll(".peca");
+    </pre>
+
+    <h3>📌 forEach</h3>
+
+    <pre>
+// Percorre todos os elementos encontrados
+pecas.forEach(function(peca) {
+
+  // Código executado para cada peça
+
+});
+    </pre>    
+
+  </section>
+
+  <section>
+    <h2>Eventos em Vários Elementos</h2>
+    <pre>
+// Para cada peça
+pecas.forEach(function(peca) {
+
+  // Adiciona evento de clique
+  peca.addEventListener("click", function() {
+
+    // ação ao clicar
+
+  });
+
+});
+    </pre> 
+
+  </section>
+
+  <section>
+    <h2>🧠 O que você aprendeu nesta pagina</h2>
+    <ul>
+        <li>trabalhar com múltiplos elementos</li>
+        <li>usar <strong>querySelectorAll</strong></li>
+        <li>percorrer elementos com <strong>forEach</strong></li>
+        <li>usar <strong>toggle</strong> para estado dinâmico</li>
+        <li>controlar interface com classes</li>
+    </ul>
+  </section>
+
+</main>
+
+</body>
+</html>
