@@ -1,45 +1,20 @@
-//capturar os elementos por ID
+const pecas = document.querySelectorAll(".card-info");
 
-//peça 1
-const statusTexto1 = document.getElementById("statusTexto1");
-const peca1 = document.getElementById("peca1");
-const textoPeca1 = document.getElementById("textoPeca1");
- 
-//peça 2
-const statusTexto2 = document.getElementById("statusTexto2");
+pecas.forEach(function(peca) {
 
-//Estado da aplicação
-let pecaAtivada = false;
-let pecaAtivada2 = false;
+  peca.addEventListener("click", function() {
 
-//Evento de clique
+    const texto = peca.querySelector("p");
+    const status = peca.querySelector("strong");
 
-//vamos adicionar evento de clique na peça 1
+    peca.classList.add("ativa");
+    peca.classList.remove("bloqueada");
 
-peca1.addEventListener("click", function(){
-    // Verificar se a peça 1 foi clicada
-    if(pecaAtivada === false){
-        //remoção de clique "bloqueado"
-        peca1.classList.remove("bloqueada");
+    status.innerText = "Desbloqueado";
+    status.style.color = "#22c55e";
 
-        //Adicionar classe ativa 
-        peca1.classList.add("ativa");
+    texto.innerText = "Parabéns! Você ativou essa peça.";
 
-        //Mudança de texto
-        statusTexto1.innerText = "Desbloqueado";
+  });
 
-        //Alterar cor do texto
-        statusTexto1.style.color = "#22c55e";
-
-        //Alterar texto
-        textoPeca1.innerText = "parabéns você ativou a primeira peça, clique novamente para abrir o conteúdo de JavaScript e DOM.";
-
-        //Atualizar var de controle
-        pecaAtivada = true;
-    }else{
-        // Se já está ativada ela abre a página
-        window.open(URL = "pagina.html");
-    }
-})
-
-
+});
