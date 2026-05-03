@@ -1,3 +1,14 @@
+// Contador de peças ativas
+function atualizarContador() {
+    const conta = document.querySelectorAll(".card-info.ativa").length;
+    const Contador = document.getElementById("Contador");
+    if(conta == 6){
+        Contador.innerText = "Parabéns, você completou a fase 1!";
+    }else{
+        Contador.innerText = "Quantidade de peças ativas: " + conta;
+    }
+}
+
 const pecas = document.querySelectorAll(".card-info");
 
 pecas.forEach(function(peca) {
@@ -7,13 +18,11 @@ pecas.forEach(function(peca) {
         const status = peca.querySelector("strong");
 
         peca.classList.add("ativa");
-        peca.classList.add("card-info:hover");
 
         status.innerText = "Desbloqueado";
         status.style.color = "#2bbd1e";
 
-
-
+        atualizarContador();
     });
 
 });
@@ -114,13 +123,13 @@ const textoPeca6 = document.getElementById("textoPeca6");
 // Inicia a função da peça 6
 peca6.addEventListener("click", function(){
     // Adição de um Easter egg na peça 6 na parte do status
-    const  EasterEgg = document.getElementById("EasterEgg");
+    const EasterEgg = document.getElementById("EasterEgg");
     EasterEgg.addEventListener("click", function(){
         EasterEgg.innerText = "sutats";
     });
 
     // Adição de outro Easter egg na peça 6 na parte do status
-    const  EasterEgg2 = document.getElementById("EasterEgg2");
+    const EasterEgg2 = document.getElementById("EasterEgg2");
     EasterEgg2.addEventListener("click", function(){
         EasterEgg2.innerText = "60 açeP";
     });

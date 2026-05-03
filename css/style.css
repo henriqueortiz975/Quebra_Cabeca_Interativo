@@ -124,6 +124,11 @@ body {
   padding: 30px;
 }
 
+/* adição de hover */
+.card-info:hover{
+  transform: scale(1.05);
+}
+
 /* ---Ativado pelo Script--- */
 
 /* Estado ativado da peça */
@@ -132,11 +137,6 @@ body {
   border: 2px solid rgba(187, 247, 208, 0.6);
   box-shadow: 0 25px 60px rgba(34, 197, 94, 0.35);
   transform: scale(1.03);
-}
-
-/* adição de hover */
-.card-info:hover{
-  transform: scale(1.05);
 }
 
 /* Adaptação para telas menores */
