@@ -1,11 +1,5 @@
 const pecas = document.querySelectorAll(".card-info");
 
-// Para mudar o icone de cada peça especificamente
-const iconePeca6 = document.getElementById("iconePeca6");
-
-// Para mudar o texto de cada peça especificamente
-const textoPeca6 = document.getElementById("textoPeca6");
-
 pecas.forEach(function(peca) {
 
     peca.addEventListener("click", function() {
@@ -13,10 +7,12 @@ pecas.forEach(function(peca) {
         const status = peca.querySelector("strong");
 
         peca.classList.add("ativa");
-        peca.classList.remove("bloqueada");
+        peca.classList.add("card-info:hover");
 
         status.innerText = "Desbloqueado";
         status.style.color = "#2bbd1e";
+
+
 
     });
 
@@ -29,7 +25,7 @@ const textoPeca1 = document.getElementById("textoPeca1");
 
 //Inicia a função da peça 1
 peca1.addEventListener("click", function(){  
-    iconePeca1.innerText = "🔓";
+    iconePeca1.innerText = "🛠️";
     textoPeca1.innerText = "Clique para abrir um resumo básico de JavaScript e DOM."
     peca1.addEventListener("click" , function(){      
         window.open("pagina.html");
@@ -65,7 +61,7 @@ const textoPeca3 = document.getElementById("textoPeca3");
 
 // Inicia a função da peça 3
 peca3.addEventListener("click", function(){
-    iconePeca3.innerText = "🔓";
+    iconePeca3.innerText = "🎨";
     textoPeca3.innerText = "Clique para abrir um resumo avançado de JavaScript e DOM."
     peca3.addEventListener("click" , function(){      
         window.open("pagina2.html");
@@ -108,3 +104,30 @@ peca5.addEventListener("click", function(){
         textoPeca5.innerText = "Clique 10 vezes para o broto crescer! (" + broto + "/10)";
     }
 });
+
+
+// Para criar a peça 6
+const peca6 = document.getElementById("peca6");
+const iconePeca6 = document.getElementById("iconePeca6");
+const textoPeca6 = document.getElementById("textoPeca6");
+
+// Inicia a função da peça 6
+peca6.addEventListener("click", function(){
+    // Adição de um Easter egg na peça 6 na parte do status
+    const  EasterEgg = document.getElementById("EasterEgg");
+    EasterEgg.addEventListener("click", function(){
+        EasterEgg.innerText = "sutats";
+    });
+
+    // Adição de outro Easter egg na peça 6 na parte do status
+    const  EasterEgg2 = document.getElementById("EasterEgg2");
+    EasterEgg2.addEventListener("click", function(){
+        EasterEgg2.innerText = "60 açeP";
+    });
+
+    iconePeca6.innerText = "✖️";
+    textoPeca6.innerText = "Parabéns! Você ativou a peça 6, ela não faz mais nada mesmo.";
+});
+
+
+
