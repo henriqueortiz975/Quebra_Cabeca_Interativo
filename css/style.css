@@ -94,6 +94,12 @@ body {
   margin-bottom: 24px;
 }
 
+/* Faz o titulo ficar ao lado do icone*/
+.tituloPeca{
+  display: flex;
+  align-items: stretch;
+}
+
 /* Estiliza a caixa de status */
 .status-box {
   display: flex;
