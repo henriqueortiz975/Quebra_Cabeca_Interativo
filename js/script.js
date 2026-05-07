@@ -38,10 +38,22 @@ function resetarJogo() {
 
         const status = peca.querySelector("strong");
         const icone = peca.querySelector(".iconePeca");
+        const texto1 = document.getElementById("textoPeca1");
+        const texto2 = document.getElementById("textoPeca2");
+        const texto3 = document.getElementById("textoPeca3");
+        const texto4 = document.getElementById("textoPeca4");
+        const texto5 = document.getElementById("textoPeca5");
+        const texto6 = document.getElementById("textoPeca6");
 
         icone.innerText = "🔒";
         status.innerText = "Bloqueada";
         status.style.color = "#facc15";
+        texto1.innerText = "Clique na peça para ativar a peça 01!";
+        texto2.innerText = "Clique na peça para ativar a peça 02!";
+        texto3.innerText = "Clique na peça para ativar a peça 03!";
+        texto4.innerText = "Clique na peça para ativar a peça 04!";
+        texto5.innerText = "Clique na peça para ativar a peça 05!";
+        texto6.innerText = "Clique na peça para ativar a peça 06!";
 
         peca.style.background = "rgba(15, 23, 42, 0.85)";
     });
@@ -122,6 +134,7 @@ pecas.forEach(function (peca) {
             }
         }
 
+
         // -------- PEÇA 3 --------
         if (peca.id === "peca3") {
             cliquePeca3++;
@@ -137,6 +150,7 @@ pecas.forEach(function (peca) {
             }
         }
 
+
         // -------- PEÇA 4 --------
         if (peca.id === "peca4") {
 
@@ -150,6 +164,7 @@ pecas.forEach(function (peca) {
             }
         }
 
+
         // -------- PEÇA 5 --------
         if (peca.id === "peca5") {
             cliquePeca5++;
@@ -162,6 +177,7 @@ pecas.forEach(function (peca) {
             }
         }
 
+        
         // -------- PEÇA 6 --------
         if (peca.id === "peca6") {
 
