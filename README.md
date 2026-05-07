@@ -235,3 +235,134 @@ O projeto deve:
 - não conter erros
 - apresentar organização
 - demonstrar uso dos conceitos da aula
+
+---
+
+# EXERCÍCIOS + EVOLUÇÃO DO PROJETO
+
+## 🧪 Exercício 1 — Regra simples
+
+---
+
+Implemente:
+
+👉 Só pode ativar **2 peças**
+
+---
+
+# 🧪 Exercício 2 — Nova regra
+
+Implemente:
+
+👉 Só pode ativar **3 peças**
+
+---
+
+# 🧪 Exercício 3 — Bloqueio total
+
+👉 Quando atingir o limite:
+
+- impedir novos cliques
+- mostrar mensagem
+
+---
+
+# 🧪 Exercício 4 — Mensagem dinâmica
+
+Quando atingir o limite:
+
+```jsx
+"Limite atingido!"
+```
+
+---
+
+# 🧩 MELHORIA NO PROJETO
+
+## 🎯 Objetivo
+
+Transformar o sistema em algo mais próximo de um jogo.
+
+---
+
+## 🔧 Implementações obrigatórias
+
+### ✔ 1. Limite de peças
+
+- máximo de peças ativas
+
+---
+
+### ✔ 2. Feedback ao usuário
+
+- alert
+- mensagem visual
+
+---
+
+### ✔ 3. Contador funcionando
+
+- atualizar sempre
+
+---
+
+# 🧩 DESAFIO (NÍVEL MÉDIO)
+
+👉 Criar:
+
+- botão "Resetar"
+- limpa todas as peças
+
+Dica:
+
+```jsx
+// remover classe de todas
+```
+
+---
+
+# 🧩 DESAFIO (NÍVEL AVANÇADO)
+
+👉 Criar condição de vitória:
+
+Quando:
+
+- todas as peças estiverem ativas
+
+Mostrar:
+
+```jsx
+"Você venceu!"
+```
+
+---
+
+# 📦 Entrega
+
+Enviar:
+
+- projeto completo
+- atualizado
+- funcionando
+
+---
+
+# 🎯 Critérios de Avaliação
+
+| Critério | Pontos |
+| --- | --- |
+| Uso de lógica (if) | 3 |
+| Implementação de regras | 3 |
+| Funcionamento | 2 |
+| Organização | 1 |
+| Visual | 1 |
+
+---
+
+# 📌 Observação
+
+O aluno deve demonstrar:
+
+- entendimento da lógica
+- aplicação correta
+- controle do sistema
