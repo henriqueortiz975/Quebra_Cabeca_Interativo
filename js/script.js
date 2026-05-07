@@ -1,13 +1,20 @@
 let LIMITE = 3;
 
-const pecas = document.querySelectorAll(".card-info");
 const Contador = document.getElementById("Contador");
+const pecas = document.querySelectorAll(".card-info");
 
-let broto = 0;
+let cliquePeca1 = 0;
+let cliquePeca3 = 0;
+let cliquePeca4 = 0;
+let cliquePeca5 = 0;
 let foguete = 0;
+let EasterEgg = document.getElementById("EasterEgg");
+let EasterEgg2 = document.getElementById("EasterEgg2");
+
 
 // -------- CONTADOR --------
 function atualizarContador() {
+
     const conta = document.querySelectorAll(".card-info.ativa").length;
 
     if (conta === LIMITE) {
@@ -36,12 +43,16 @@ function resetarJogo() {
         status.innerText = "Bloqueada";
         status.style.color = "#facc15";
 
-        // 🔄 VOLTA COR PADRÃO
         peca.style.background = "rgba(15, 23, 42, 0.85)";
     });
 
-    broto = 0;
+    cliquePeca1 = 0;
+    cliquePeca3 = 0;
+    cliquePeca4 = 0;
+    cliquePeca5 = 0;
     foguete = 0;
+    EasterEgg.innerText = "status";
+    EasterEgg2.innerText = "Peça 06";
 
     atualizarContador();
 }
@@ -52,75 +63,118 @@ pecas.forEach(function (peca) {
     peca.addEventListener("click", function () {
 
         const ativas = document.querySelectorAll(".card-info.ativa").length;
+
         const status = peca.querySelector("strong");
         const icone = peca.querySelector(".iconePeca");
         const texto = peca.querySelector("p");
 
-        // 🚫 BLOQUEIA LIMITE
         if (!peca.classList.contains("ativa") && ativas >= LIMITE) {
             alert("Limite atingido!");
             return;
         }
 
-        // 🚫 NÃO RECLICA SE JÁ ATIVA
-        if (peca.classList.contains("ativa")) return;
+        if (peca.classList.contains("ativa") && peca.id !== "peca1" && peca.id !== "peca2" 
+        && peca.id !== "peca3" && peca.id !== "peca4" && peca.id !== "peca5" && peca.id !== "peca6") {
+            return;
+        }
 
-        // ✅ ATIVAÇÃO PADRÃO
-        peca.classList.add("ativa");
-        peca.classList.remove("bloqueada");
+        if (!peca.classList.contains("ativa")) {
 
-        status.innerText = "Desbloqueado";
-        status.style.color = "#2bbd1e";
+            peca.classList.add("ativa");
+            peca.classList.remove("bloqueada");
 
-        // 🟢 COR VERDE PADRÃO
-        peca.style.background = "linear-gradient(135deg, #16a34a, #22c55e)";
+            status.innerText = "Desbloqueado";
+            status.style.color = "#2bbd1e";
 
-        // -------- COMPORTAMENTO POR ID --------
-        switch (peca.id) {
+            peca.style.background = "linear-gradient(135deg, #16a34a, #22c55e)";
+        }
 
-            case "peca1":
+        // -------- PEÇA 1 --------
+        if (peca.id === "peca1") {
+            cliquePeca1++;
+
+            if (cliquePeca1 === 1) {
                 icone.innerText = "🛠️";
-                texto.innerText = "Abrindo resumo básico...";
+                texto.innerText = "Clique novamente para abrir o resumo.";
+            }
+
+            if (cliquePeca1 === 2) {
                 window.open("pagina.html");
-                break;
+                cliquePeca1 = 0;
+                cliquePeca1++;
+            }
+        }
 
-            case "peca2":
+
+        // -------- PEÇA 2 --------
+        if (peca.id === "peca2") {
+
+            if (peca.classList.contains("verde")) {
+                peca.style.background = "#c52222";
+                icone.innerText = "🔴";
+                texto.innerText = "Clique para trocar para verde!";
+                peca.classList.remove("verde");
+            }else{
+                peca.style.background = "linear-gradient(135deg, #16a34a, #22c55e)";
                 icone.innerText = "🟢";
-                texto.innerText = "Agora está verde!";
-                break;
+                texto.innerText = "Clique para trocar para vermelho!";
+                peca.classList.add("verde");
+            }
+        }
 
-            case "peca3":
+        // -------- PEÇA 3 --------
+        if (peca.id === "peca3") {
+            cliquePeca3++;
+            if (cliquePeca3 === 1) {
                 icone.innerText = "🎨";
-                texto.innerText = "Abrindo resumo avançado...";
+                texto.innerText = "Clique novamente para abrir o resumo avançado.";
+            }
+
+            if (cliquePeca3 === 2) {
                 window.open("pagina2.html");
-                break;
+                cliquePeca3 = 0;
+                cliquePeca3++;
+            }
+        }
 
-            case "peca4":
-                if (foguete === 1) {
-                    icone.innerText = "💥";
-                    texto.innerText = "Explodiu!";
-                } else {
-                    icone.innerText = "🚀";
-                    texto.innerText = "Clique novamente...";
-                    foguete++;
-                }
-                break;
+        // -------- PEÇA 4 --------
+        if (peca.id === "peca4") {
 
-            case "peca5":
-                broto++;
-                if (broto >= 10) {
-                    icone.innerText = "🌳";
-                    texto.innerText = "Cresceu!";
-                } else {
-                    icone.innerText = "🌱";
-                    texto.innerText = `Clique (${broto}/10)`;
-                }
-                break;
+            if (cliquePeca4 === 1) {
+                icone.innerText = "💥";
+                texto.innerText = "Meu deus! Você realmente explodiu o foguete?!";
+            }else{
+                icone.innerText = "🚀";
+                texto.innerText = "Clique novamente para explodir o foguete";
+                cliquePeca4++;
+            }
+        }
 
-            case "peca6":
-                icone.innerText = "✖️";
-                texto.innerText = "Peça secreta ativada!";
-                break;
+        // -------- PEÇA 5 --------
+        if (peca.id === "peca5") {
+            cliquePeca5++;
+            if (cliquePeca5 >= 10) {
+                icone.innerText = "🌳";
+                texto.innerText = "Parabéns! Seu broto cresceu e virou uma árvore!";
+            }else{
+                icone.innerText = "🌱";
+                texto.innerText = "Clique 10 vezes para o broto crescer! (" + cliquePeca5 + "/10)";
+            }
+        }
+
+        // -------- PEÇA 6 --------
+        if (peca.id === "peca6") {
+
+            icone.innerText = "✖️";
+            texto.innerText = "Parabéns! Você ativou a peça 6, ela não faz mais nada mesmo.";
+
+            EasterEgg.onclick = function() {
+                EasterEgg.innerText = "sutats";
+            };
+
+            EasterEgg2.onclick = function() {
+                EasterEgg2.innerText = "60 açeP";
+            };
         }
 
         atualizarContador();
